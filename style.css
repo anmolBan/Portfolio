@@ -9,8 +9,11 @@
 :root{
     --white: rgb(255, 255, 255);
     --orange: rgb(255, 145, 0);
+    --small-text: 0.6rem;
+    --med-text: 0.75rem;
     --text: 1rem;
-    --text: 1.1rem;
+    --small-heading: 2rem;
+    --med-heading: 3.5rem;
     --heading: 5rem;
     --poppins: 'Poppins', sans-serif;
 }
@@ -58,6 +61,7 @@
 .nav-list{
     top: 10%;
     text-align: center;
+    white-space: nowrap;
 }
 
 a{
@@ -85,6 +89,8 @@ a{
     color: white;
     font-size: var(--heading);
     font-family: var(--poppins);
+    text-align: center;
+    white-space: nowrap;
 }
 
 .social{
@@ -113,3 +119,77 @@ a{
 .social div:hover{
     box-shadow: 0 0 20px rgb(255, 254, 254);
 }
+
+@media screen and (max-width: 293px){
+    a{
+        font-size: var(--small-text);
+    }
+
+    .nav-list ul li{
+        white-space: normal;
+        margin-left: 0.1rem;
+    }
+
+    .myname h1{
+        font-size: var(--small-heading);
+    }
+
+    .social{
+        top: 50%;
+    }
+
+    .social div{
+        height: 20px;
+        width: 20px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+
+@media screen and (min-width: 294px) and (max-width:400px){
+    a{
+        font-size: var(--small-text);
+    }
+
+    .nav-list ul li{
+        margin-left: 0.1rem;
+    }
+
+    .myname h1{
+        font-size: var(--small-heading);
+    }
+
+    .social{
+        top: 50%;
+    }
+
+    .social div{
+        height: 20px;
+        width: 20px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 800px){
+    a{
+        font-size: var(--med-text);
+    }
+
+    .nav-list ul li{
+        margin-left: 0.5rem;
+    }
+
+    .myname h1{
+        font-size: var(--med-heading);
+    }
+
+    .social div{
+        height: 30px;
+        width: 30px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
