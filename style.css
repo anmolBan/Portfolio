@@ -217,7 +217,7 @@ a{
 }
 
 .skill:hover{
-    transform: scale(1.1);
+    transform: scale(1.5);
     transition-duration: 0.3s;
     filter: drop-shadow(6px 7px 5px #333);
 }
@@ -471,13 +471,6 @@ a{
     .summary p{
         font-size: 14px;
     }
-
-    /* Skills Section */
-
-    /* .skill{
-        height: 28px;
-        width: 160px;
-    } */
 }
 
 @media screen and (min-width: 995px) and (max-width: 1200px){
@@ -486,12 +479,16 @@ a{
         width: 160px;
     }
 
+    .skill:hover{
+        transform: scale(1.4);
+    }
+
     .skill div{
         height: 28px;
     }
 }
 
-@media screen and (min-width: 438px) and (max-width:994px){
+@media screen and (min-width: 437px) and (max-width:994px){
 
     .container-skills{
         display: grid;
@@ -506,6 +503,10 @@ a{
         width: 160px;
     }
 
+    .skill:hover{
+        transform: scale(1.2);
+    }
+
     .skill div{
         height: 28px;
     }
@@ -517,13 +518,17 @@ a{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        grid-gap: 10px;
+        grid-gap: 20px;
         justify-items: center;
     }
 
     .skill{
         height: 21px;
         width: 120px;
+    }
+
+    .skill:hover{
+        transform: scale(1.2);
     }
 
     .skill p{
@@ -535,7 +540,7 @@ a{
     }
 }
 
-@media screen and (min-width: 250px) and (max-width:314px){
+@media screen and (min-width: 250px) and (max-width:315px){
 
     .container-skills{
         display: grid;
@@ -548,6 +553,10 @@ a{
     .skill{
         height: 16px;
         width: 80px;
+    }
+
+    .skill:hover{
+        transform: scale(1.1);
     }
 
     .skill p{
