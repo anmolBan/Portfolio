@@ -108,10 +108,21 @@ a{
     color: var(--white);
     font-size: var(--text);
     font-family: var(--poppins);
+    transition-duration: 0.4s;
 }
 
-.nav-list ul li{
+.nav-list li{
     margin-left: 1rem;
+}
+
+.nav-list li div{
+    display: inline-block;
+    transition-duration: 0.4s;
+}
+
+.nav-list li:hover div{
+    transform: scale(1.2);
+    transition-duration: 0.4s;
 }
 
 .nav-list li:hover a{
@@ -149,6 +160,7 @@ a{
     margin-left: 30px;
     margin-right: 30px;
     border-radius: 50%;
+    transition-duration: 0.4s;
 }
 
 .social div img{
@@ -163,6 +175,7 @@ a{
 .social div:hover{
     box-shadow: 0 0 20px rgb(255, 254, 254);
     transition-duration: 0.4s;
+    transform: scale(1.5);
 }
 
 /* About Section */
@@ -231,11 +244,12 @@ a{
     background-color: var(--white);
     border-radius: 50px;
     overflow: hidden;
+    transition: 0.3s;
 }
 
 .skill:hover{
     transform: scale(1.5);
-    transition-duration: 0.3s;
+    transition: 0.3s;
     filter: drop-shadow(6px 7px 5px #333);
 }
 
@@ -310,7 +324,7 @@ a{
 }
 
 .project:hover div{
-    transition-duration: 0.5s;
+    transition: 0.5s;
     opacity: 1;
 }
 
@@ -334,6 +348,7 @@ a{
     opacity: 0;
     z-index: 2;
     background-color: #333333bd;
+    transition: 0.5s;
 }
 
 .project div .project-details{
