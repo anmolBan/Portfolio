@@ -509,23 +509,7 @@ a{
     }
 }
 
-@media screen and (min-width: 360px) and (max-width: 420px){
-    .about{
-        height: 60vh;
-    }
-
-    .dp{
-        height: 120px;
-        width: 120px;
-        top: -4rem;
-    }
-
-    .summary p{
-        font-size: var(--med-text);
-    }
-}
-
-@media screen and (max-width: 360px){
+@media screen and (max-width: 420px){
     .about{
         height: 60vh;
     }
