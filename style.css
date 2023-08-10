@@ -58,7 +58,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    top: 30px;
+    top: 20px;
     justify-items: center;
 }
 
@@ -353,9 +353,12 @@ a{
     font-size: var(--med-text);
 }
 
-@media screen and (max-width: 293px){
+/* Media Queries */
 
-    /* Header Section */
+/* Header Section */
+
+@media screen and (max-width: 293px){
+    
     a{
         font-size: var(--small-text);
     }
@@ -377,29 +380,11 @@ a{
         height: 20px;
         width: 20px;
     }
-
-    /* About Section */
-
-    .about{
-        height: 60vh;
-    }
-
-    .dp{
-        height: 140px;
-        width: 140px;
-        top: -4.5rem;
-    }
-
-    .summary p{
-        font-size: 0.6rem;
-    }
-
 }
 
 
 @media screen and (min-width: 294px) and (max-width:400px){
 
-    /* Header Section */
     a{
         font-size: var(--small-text);
     }
@@ -420,27 +405,10 @@ a{
         height: 20px;
         width: 20px;
     }
-
-    /* About Section */
-
-    .about{
-        height: 60vh;
-    }
-
-    .dp{
-        height: 150px;
-        width: 150px;
-        top: -4.8rem;
-    }
-
-    .summary p{
-        font-size: var(--med-text);;
-    }
 }
 
 @media screen and (min-width: 401px) and (max-width: 600px){
 
-    /* Header Section */
     a{
         font-size: var(--med-text);
     }
@@ -460,28 +428,11 @@ a{
     .social div{
         height: 30px;
         width: 30px;
-    }
-
-    /* About Section */
-
-    .about{
-        height: 60vh;
-    }
-
-    .dp{
-        height: 165px;
-        width: 165px;
-        top: -5rem;
-    }
-
-    .summary p{
-        font-size: var(--med-text);
     }
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px){
 
-    /* Header Section */
     a{
         font-size: var(--med-text);
     }
@@ -501,27 +452,11 @@ a{
     .social div{
         height: 30px;
         width: 30px;
-    }
-
-    /* About Section */
-    
-    .about{
-        height: 60vh;
-    }
-
-    .dp{
-        height: 190px;
-        width: 190px;
-        top: -6rem;
-    }
-
-    .summary p{
-        font-size: var(--med-text);
     }
 }
 
 @media screen and (min-width: 901px) and (max-width: 1200px){
-    /* Header Section */
+    
     a{
         font-size: var(--med-text);
     }
@@ -542,23 +477,11 @@ a{
         height: 30px;
         width: 30px;
     }
-
-    /* About Section */
-    
-    .about{
-        height: 60vh;
-    }
-
-    .dp{
-        height: 190px;
-        width: 190px;
-        top: -6rem;
-    }
-
-    .summary p{
-        font-size: 14px;
-    }
 }
+
+/* About Section */
+
+/* Skills Section */
 
 @media screen and (min-width: 995px) and (max-width: 1200px){
     .skill{
@@ -581,7 +504,7 @@ a{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        grid-gap: 30px;
+        grid-gap: 10px;
         justify-items: center;
     }
 
@@ -605,7 +528,7 @@ a{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        grid-gap: 20px;
+        grid-gap: 10px;
         justify-items: center;
     }
 
@@ -652,5 +575,78 @@ a{
 
     .skill div{
         height: 21px;
+    }
+}
+
+/* Portfolio Section */
+
+@media screen and (min-width: 760px) and (max-width: 1000px), screen and (max-height: 620px){
+    .project{
+        height: 250px;
+        width: 250px;
+        border-radius: 40px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 760px){
+    .project{
+        height: 200px;
+        width: 200px;
+        border-radius: 35px;
+    }
+}
+
+@media screen and (min-width: 420px) and (max-width: 600px){
+    .container-projects{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .project{
+        height: 200px;
+        width: 200px;
+        border-radius: 35px;
+    }
+}
+
+@media screen and (min-width: 310px) and (max-width: 420px), screen and (max-height: 610px){
+    .container-projects{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .project{
+        height: 150px;
+        width: 150px;
+        border-radius: 20px;
+    }
+
+    .project div .project-details{
+        font-size: 16px;
+    }
+
+    .project div p{
+        font-size: var(--small-text);
+    }
+}
+
+@media screen and (max-width: 310px){
+    .container-projects{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .project{
+        height: 120px;
+        width: 120px;
+        border-radius: 10px;
+    }
+
+    .project div .project-details{
+        font-size: 14px;
+    }
+
+    .project div p{
+        font-size: var(--xsmall-text);
     }
 }
