@@ -365,7 +365,93 @@ a{
 
 /* Contact Section */
 
+.contact{
+    height: 80vh;
+    background-color: var(--white);
+    background-image: linear-gradient(to top right, blue, green);
+}
 
+.container-getintouch-sendmessage{
+    /* background-color: red; */
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 70%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+}
+
+.send-message{
+    /* background-color: blue; */
+    width: 100%;
+}
+
+.send-message form{
+    /* background-color: pink; */
+    height: 100%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 20% 1fr 20%;
+    align-items:center;
+    justify-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.form-element{
+    background-color: var(--transparent);
+    height: 30px;
+    width: 70%;
+    border: none;
+    border-bottom: 2px solid var(--white);
+    align-self: self-end;
+    outline: none;
+    font-family: var(--poppins);
+    font-size: var(--text);
+    caret-color: var(--white);
+    color: var(--white);
+}
+
+.form-element::placeholder{
+    font-family: var(--poppins);
+    font-size: var(--text);
+    color: var(--white);
+}
+
+.send-message #message{
+    height: 80%;
+    max-width: 70%;
+}
+
+.button-container{
+    display: inline-block;
+    background-color: red;
+}
+
+#button{
+    border: 2px solid var(--white);
+    width: 30%;
+    height: 40%;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
+button:hover{
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
+.get-in-touch{
+    background-color: blue;
+    width: 100%;
+}
 
 /* Media Queries */
 
