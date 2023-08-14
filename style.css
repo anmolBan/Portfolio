@@ -57,10 +57,12 @@
 
 .container-icon-heading{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 50px 1fr;
     grid-template-rows: repeat(1, 1fr);
     top: 20px;
     justify-items: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .container-icon{
@@ -383,12 +385,11 @@ a{
 }
 
 .container-getintouch-sendmessage{
-    /* background-color: red; */
+    height: 80%;
+    width: 90%;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    height: 80%;
-    width: 90%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
@@ -399,11 +400,9 @@ a{
 .send-message{
     height: 80%;
     width: 100%;
-    /* background-color: yellow; */
 }
 
 .send-message form{
-    /* background-color: pink; */
     height: 100%;
     width: 80%;
     display: grid;
@@ -443,14 +442,10 @@ a{
     max-width: 70%;
 }
 
-.button-container{
-    display: inline-block;
-}
-
 #button{
     border: 2px solid var(--white);
     width: 30%;
-    height: 40%;
+    height: 50%;
     cursor: pointer;
     transition: 0.3s;
     border-radius: 50px;
@@ -466,24 +461,22 @@ button:hover{
 .get-in-touch{
     height: 80%;
     width: 100%;
-    /* background-color: blue; */
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     justify-items:center;
     align-items: center;
-    /* grid-gap: 0; */
 }
 
 .get-in-touch .element-container{
-    width: 55%;
-    /* background-color: red; */
+    max-width: 55%;
 }
 
 .get-in-touch .info{
     color: var(--white);
     font-family: var(--poppins);
     font-size: 14px;
+    text-align: justify;
 }
 
 .small-headings{
@@ -503,7 +496,6 @@ button:hover{
 .icon-info-container{
     display: grid;
     grid-template-columns: 50px 1fr;
-    /* grid-template-rows: repeat(3, 1fr); */
     justify-items: center;
     align-items: center;
     grid-gap: 10px;
@@ -511,22 +503,21 @@ button:hover{
 
 .icon-info-container p{
     justify-self: left;
+    white-space: pre-wrap;
 }
 
 .icon-container{
     height: 30px;
     width: 30px;
-    /* display: inline-block; */
 }
 
 .icon-container img{
-    /* display: inline-block; */
     height: 100%;
     width: 100%;
 }
 
 .contact .social{
-    top: 90%;
+    top: 95%;
     left: 50%;
     transform: translateX(-50%) translateY(-90%);
 }
@@ -863,5 +854,145 @@ button:hover{
 
     .project div p{
         font-size: var(--xsmall-text);
+    }
+}
+
+/* Contact Section */
+
+@media screen and (min-width: 900px) and (max-width: 1200px){
+    
+    .form-element{
+        font-size: var(--med-text);
+    }
+
+    .form-element::placeholder{
+        font-size: var(--med-text);
+    }
+
+    #button{
+        font-size: var(--med-text);
+    }
+
+    .get-in-touch .info{
+        font-size: var(--med-text);
+    }
+
+    .small-headings{
+        font-size: var(--text);
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px){
+
+    .form-element{
+        font-size: var(--small-text);
+    }
+
+    .form-element::placeholder{
+        font-size: var(--small-text);
+    }
+
+    #button{
+        font-size: var(--small-text);
+    }
+
+    .get-in-touch .info{
+        font-size: var(--small-text);
+    }
+
+    .small-headings{
+        font-size: var(--text);
+    }
+}
+
+@media screen and (min-width: 620px) and (max-width: 700px){
+    
+    .contact{
+        height: 200vh;
+    }
+
+    .container-getintouch-sendmessage{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 350px) and (max-width: 620px){
+    .contact{
+        height: 200vh;
+    }
+
+    .container-getintouch-sendmessage{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .form-element{
+        font-size: var(--med-text);
+    }
+
+    .form-element::placeholder{
+        font-size: var(--med-text);
+    }
+
+    #button{
+        font-size: var(--med-text);
+    }
+
+    .get-in-touch .info{
+        font-size: var(--med-text);
+    }
+
+    .small-headings{
+        font-size: var(--text);
+    }
+
+    .icon-info-container{
+        grid-gap: 0;
+    }
+
+    .icon-container{
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .contact{
+        height: 200vh;
+    }
+
+    .container-getintouch-sendmessage{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .form-element{
+        font-size: var(--small-text);
+    }
+
+    .form-element::placeholder{
+        font-size: var(--small-text);
+    }
+
+    #button{
+        font-size: var(--med-text);
+    }
+
+    .get-in-touch .info{
+        font-size: var(--small-text);
+    }
+
+    .small-headings{
+        font-size: var(--text);
+    }
+
+    .icon-info-container{
+        grid-gap: 0;
+    }
+
+    .icon-container{
+        height: 20px;
+        width: 20px;
     }
 }
