@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -309,6 +309,7 @@ a{
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    grid-gap: 30px;
 }
 
 .project{
@@ -316,10 +317,16 @@ a{
     width: 300px;
     overflow: hidden;
     border-radius: 50px;
+    transition: 0.3s;
+}
+
+.project:hover{
+    transform: scale(1.08);
+    transition: 0.3s;
 }
 
 .project:hover div{
-    transition: 0.5s;
+    transition: 0.3s;
     opacity: 1;
 }
 
@@ -343,7 +350,7 @@ a{
     opacity: 0;
     z-index: 2;
     background-color: #333333bd;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .project div .project-details{
@@ -366,9 +373,13 @@ a{
 /* Contact Section */
 
 .contact{
-    height: 80vh;
+    height: 100vh;
     background-color: var(--white);
-    background-image: linear-gradient(to top right, blue, green);
+    background-image: linear-gradient(to top right, var(--blue), #403066);
+}
+
+.contact .heading{
+    color: var(--white);
 }
 
 .container-getintouch-sendmessage{
@@ -376,17 +387,19 @@ a{
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    height: 70%;
+    height: 80%;
     width: 90%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     justify-items: center;
+    align-items: center;
 }
 
 .send-message{
-    /* background-color: blue; */
+    height: 80%;
     width: 100%;
+    /* background-color: yellow; */
 }
 
 .send-message form{
@@ -424,13 +437,14 @@ a{
 }
 
 .send-message #message{
-    height: 80%;
+    min-height: 80%;
+    max-height: 80%;
+    min-width: 70%;
     max-width: 70%;
 }
 
 .button-container{
     display: inline-block;
-    background-color: red;
 }
 
 #button{
@@ -441,6 +455,7 @@ a{
     transition: 0.3s;
     border-radius: 50px;
     white-space: nowrap;
+    align-self: center;
 }
 
 button:hover{
@@ -449,8 +464,71 @@ button:hover{
 }
 
 .get-in-touch{
-    background-color: blue;
+    height: 80%;
     width: 100%;
+    /* background-color: blue; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items:center;
+    align-items: center;
+    /* grid-gap: 0; */
+}
+
+.get-in-touch .element-container{
+    width: 55%;
+    /* background-color: red; */
+}
+
+.get-in-touch .info{
+    color: var(--white);
+    font-family: var(--poppins);
+    font-size: 14px;
+}
+
+.small-headings{
+    color: var(--white);
+    font-family: var(--poppins);
+    font-weight: 700;
+    font-size: var(--large-text);
+}
+
+.all-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.icon-info-container{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    /* grid-template-rows: repeat(3, 1fr); */
+    justify-items: center;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+.icon-info-container p{
+    justify-self: left;
+}
+
+.icon-container{
+    height: 30px;
+    width: 30px;
+    /* display: inline-block; */
+}
+
+.icon-container img{
+    /* display: inline-block; */
+    height: 100%;
+    width: 100%;
+}
+
+.contact .social{
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-90%);
 }
 
 /* Media Queries */
@@ -475,11 +553,6 @@ button:hover{
     .social{
         top: 60%;
     }
-
-    /* .social div{
-        height: 20px;
-        width: 20px;
-    } */
 
     .social div{
         height: 30px;
@@ -550,10 +623,6 @@ button:hover{
         font-size: var(--med-heading);
     }
 
-    /* .social{
-        top: 60%;
-    } */
-
     .social div{
         height: 40px;
         width: 40px;
@@ -573,10 +642,6 @@ button:hover{
     .myname h1{
         font-size: var(--med-heading);
     }
-
-    /* .social{
-        top: 60%;
-    }*/
 
     .social div{
         height: 45px;
@@ -729,7 +794,7 @@ button:hover{
 
 /* Portfolio Section */
 
-@media screen and (min-width: 760px) and (max-width: 1000px), screen and (max-height: 620px){
+@media screen and (min-width: 850px) and (max-width: 1000px){
     .project{
         height: 250px;
         width: 250px;
@@ -737,7 +802,7 @@ button:hover{
     }
 }
 
-@media screen and (min-width: 600px) and (max-width: 760px){
+@media screen and (min-width: 670px) and (max-width: 850px), screen and (max-height: 700px){
     .project{
         height: 200px;
         width: 200px;
@@ -745,7 +810,7 @@ button:hover{
     }
 }
 
-@media screen and (min-width: 420px) and (max-width: 600px){
+@media screen and (min-width: 440px) and (max-width: 670px){
     .container-projects{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -758,10 +823,11 @@ button:hover{
     }
 }
 
-@media screen and (min-width: 310px) and (max-width: 420px), screen and (max-height: 610px){
+@media screen and (min-width: 340px) and (max-width: 440px), screen and (max-height: 610px){
     .container-projects{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10px;
     }
 
     .project{
@@ -779,15 +845,15 @@ button:hover{
     }
 }
 
-@media screen and (max-width: 310px){
+@media screen and (max-width: 340px){
     .container-projects{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
     }
 
     .project{
-        height: 120px;
-        width: 120px;
+        height: 100px;
+        width: 100px;
         border-radius: 10px;
     }
 
